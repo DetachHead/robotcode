@@ -148,13 +148,13 @@ jobs:
       - name: install node modules
         run: npm install --also=dev
 
-      - name: update versions from git
-        if: ${{ !startsWith( github.ref, 'refs/tags/v') }}
-        run: hatch run build:update-git-versions
+      # - name: update versions from git
+      #   if: ${{ !startsWith( github.ref, 'refs/tags/v') }}
+      #   run: hatch run build:update-git-versions
 
-      - name: update doc links
-        if: ${{ startsWith( github.ref, 'refs/tags/v') }}
-        run: hatch run build:update-doc-links
+      # - name: update doc links
+      #   if: ${{ startsWith( github.ref, 'refs/tags/v') }}
+      #   run: hatch run build:update-doc-links
 
       - name: package
         run: hatch run build:package
