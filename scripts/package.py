@@ -53,7 +53,7 @@ def main() -> None:
     ).check_returncode()
 
     run(
-        f"npx vsce package {'--pre-release' if get_version().prerelease else ''} -o ./dist",
+        "npx vsce package --pre-release -o ./dist",
         shell=True,
         check=False,
     ).check_returncode()
