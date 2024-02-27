@@ -126,9 +126,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: git describe --tag
-      - run: git describe --tag --long --first-parent --match "v[0-9]*"
-
       - name: setup python environment
         id: setup-python
         uses: actions/setup-python@v5
