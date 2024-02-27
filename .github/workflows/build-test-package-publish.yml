@@ -186,7 +186,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: git describe --tag
+#      - run: git describe --tag
 
       - name: setup python environment
         id: setup-python
